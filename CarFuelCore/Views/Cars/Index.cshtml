@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Car>
+
+@{
+  ViewBag.Title = "Cars";
+}
+
+<h2>Cars</h2>
+
+<a href="~/Cars/Add" class="btn btn-default btn-sm">Add new car</a>
+
+@foreach (var c in Model) {
+  <div>
+    @c.Make / @c.Model
+    (@c.AverageConsumptionRate Km/L.)
+  </div>
+}
+
+Total = @Model.Count() cars.
